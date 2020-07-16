@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Personal\\Projects\\JWT-Authentication-with-.Net-Core-Web-API-and-Angular-7\\WebAPI\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Personal\\Projects\\CarHistory\\WebAPI\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Personal\\Projects\\JWT-Authentication-with-.Net-Core-Web-API-and-Angular-7\\WebAPI\\WebAPI\\WebAPI.csproj": {
+    "C:\\Personal\\Projects\\CarHistory\\WebAPI\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Personal\\Projects\\JWT-Authentication-with-.Net-Core-Web-API-and-Angular-7\\WebAPI\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Personal\\Projects\\CarHistory\\WebAPI\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Personal\\Projects\\JWT-Authentication-with-.Net-Core-Web-API-and-Angular-7\\WebAPI\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Personal\\Projects\\CarHistory\\WebAPI\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\gbarzu\\.nuget\\packages\\",
-        "outputPath": "C:\\Personal\\Projects\\JWT-Authentication-with-.Net-Core-Web-API-and-Angular-7\\WebAPI\\WebAPI\\obj\\",
+        "outputPath": "C:\\Personal\\Projects\\CarHistory\\WebAPI\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -63,6 +63,12 @@
               "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.6, )"
             },

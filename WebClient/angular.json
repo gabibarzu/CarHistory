@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WebClient": {
+    "car-history": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,20 +17,21 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WebClient",
+            "outputPath": "dist/car-history",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WebClient:build"
+            "browserTarget": "car-history:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WebClient:build:production"
+              "browserTarget": "car-history:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WebClient:build"
+            "browserTarget": "car-history:build"
           }
         },
         "test": {
@@ -87,13 +88,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -105,27 +101,25 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WebClient:serve"
+            "devServerTarget": "car-history:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WebClient:serve:production"
+              "devServerTarget": "car-history:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "WebClient",
+  "defaultProject": "car-history",
   "cli": {
     "analytics": "7a70650f-3562-45a6-8f82-816fa1d37723"
   }

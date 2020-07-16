@@ -9,9 +9,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using WebAPI.Models;
+using WebAPI.Core.Models.ApplicationCore;
+using WebAPI.Core.Models.Authentication;
+using WebAPI.Infrastructure.DataAccess;
 
-namespace WebAPI
+namespace WebAPI.Web
 {
     public class Startup
     {
@@ -49,7 +51,7 @@ namespace WebAPI
             services.AddCors();
 
             //Jwt Authentication
-            var key = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JWT_Secret"]);
+            var key = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JwtSecret"]);
 
             services.AddAuthentication(x =>
             {
@@ -89,16 +91,18 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseRouting();
+
             app.UseCors(builder =>
-            builder.WithOrigins(
-                Configuration["ApplicationSettings:Client_URL"])
-                .AllowAnyHeader()
-                .AllowAnyMethod()
+                builder.WithOrigins(
+                        Configuration["ApplicationSettings:ClientURL"])
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
             );
 
             app.UseAuthentication();
 
-            app.UseRouting();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

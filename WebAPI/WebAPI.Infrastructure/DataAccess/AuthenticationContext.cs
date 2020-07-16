@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using WebAPI.Core.Models;
+using WebAPI.Core.Models.Authentication;
 
 namespace WebAPI.Infrastructure.DataAccess
 {

@@ -1,4 +1,4 @@
-﻿namespace WebAPI.Core.Models
+﻿namespace WebAPI.Core.Models.ApplicationCore
 {
     public class ApplicationSettings
     {

@@ -11,9 +11,6 @@ C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -25,7 +22,6 @@ C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -35,8 +31,6 @@ C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
@@ -135,9 +129,6 @@ C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.Inf
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.Core.pdb
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.Infrastructure.pdb
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.csprojAssemblyReference.cache
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.csproj.CoreCompileInputs.cache
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.MvcApplicationPartsAssemblyInfo.cs
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.AssemblyInfoInputs.cache
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.AssemblyInfo.cs
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.RazorTargetAssemblyInfo.cache
@@ -145,3 +136,12 @@ C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.dll
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.pdb
 C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.genruntimeconfig.cache
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.csproj.CoreCompileInputs.cache
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.Web.MvcApplicationPartsAssemblyInfo.cache

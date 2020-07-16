@@ -9,7 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using WebAPI.Core.Models;
+using WebAPI.Core.Models.ApplicationCore;
+using WebAPI.Core.Models.Authentication;
 using WebAPI.Infrastructure.DataAccess;
 
 namespace WebAPI.Web
@@ -90,16 +91,18 @@ namespace WebAPI.Web
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseRouting();
+
             app.UseCors(builder =>
-            builder.WithOrigins(
-                Configuration["ApplicationSettings:ClientURL"])
-                .AllowAnyHeader()
-                .AllowAnyMethod()
+                builder.WithOrigins(
+                        Configuration["ApplicationSettings:ClientURL"])
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
             );
 
             app.UseAuthentication();
 
-            app.UseRouting();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

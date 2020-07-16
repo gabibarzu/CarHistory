@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using WebAPI.Core.Models;
+using WebAPI.Core.Models.ApplicationCore;
+using WebAPI.Core.Models.Authentication;
 
-namespace WebAPI.Web.Controllers
+namespace WebAPI.Web.Controllers.Authentication
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ApplicationUserController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private SignInManager<ApplicationUser> _singInManager;
+        private readonly SignInManager<ApplicationUser> _singInManager;
         private readonly ApplicationSettings _appSettings;
 
         public ApplicationUserController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<ApplicationSettings> appSettings)
@@ -45,8 +46,7 @@ namespace WebAPI.Web.Controllers
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                return BadRequest(ex);
             }
         }
 
@@ -60,7 +60,7 @@ namespace WebAPI.Web.Controllers
             {
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
-                    Subject = new ClaimsIdentity(new Claim[]
+                    Subject = new ClaimsIdentity(new[]
                     {
                         new Claim("UserID",user.Id)
                     }),

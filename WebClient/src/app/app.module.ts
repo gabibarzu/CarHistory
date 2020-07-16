@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { RegistrationComponent } from './user/registration/registration.component';
-import { LoginComponent } from './user/login/login.component';
-import { HomeComponent } from './home/home.component';
+
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { UserService } from './shared/user.service';
-import { AuthInterceptor } from './auth/auth.interceptor';
+import { UserComponent } from './modules/user/user.component';
+import { RegistrationComponent } from './modules/user/registration/registration.component';
+import { LoginComponent } from './modules/user/login/login.component';
+import { HomeComponent } from './modules/home/home.component';
+import { AuthInterceptor } from './core/auth/auth.interceptor';
+
 
 @NgModule({
   declarations: [

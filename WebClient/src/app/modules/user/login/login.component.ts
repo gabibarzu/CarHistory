@@ -1,5 +1,5 @@
 import { ToastrService } from 'ngx-toastr';
-import { UserService } from './../../shared/user.service';
+import { UserService } from '../../../shared/user.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styles: []
+  styles: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   formModel = {

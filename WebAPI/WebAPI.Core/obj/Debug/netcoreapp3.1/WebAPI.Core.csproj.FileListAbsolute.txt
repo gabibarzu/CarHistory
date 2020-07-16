@@ -1,9 +1,0 @@
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\bin\Debug\netcoreapp3.1\WebAPI.Core.deps.json
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\bin\Debug\netcoreapp3.1\WebAPI.Core.dll
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\bin\Debug\netcoreapp3.1\WebAPI.Core.pdb
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\obj\Debug\netcoreapp3.1\WebAPI.Core.csproj.CoreCompileInputs.cache
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\obj\Debug\netcoreapp3.1\WebAPI.Core.AssemblyInfoInputs.cache
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\obj\Debug\netcoreapp3.1\WebAPI.Core.AssemblyInfo.cs
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\obj\Debug\netcoreapp3.1\WebAPI.Core.dll
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\obj\Debug\netcoreapp3.1\WebAPI.Core.pdb
-C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Core\obj\Debug\netcoreapp3.1\WebAPI.Core.csprojAssemblyReference.cache

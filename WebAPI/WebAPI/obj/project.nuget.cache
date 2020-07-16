@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "48+76CLxoIhIknODb0zPSO8KhidPz5yCsECOi6SV4VaRTKp/KStqh/hgf9QN09IdVeZ8iPnlMh1QQlj5SLGoYA==",
+  "dgSpecHash": "JKXqkn97PwrvMw7BFSp0eitkIHNbf+SfpaU4QNXc7LYMlDqyWIQ1IMymrQnPoi6J60tQE3Fn0lpzlUU7hzwGaA==",
   "success": true,
-  "projectFilePath": "C:\\Personal\\Projects\\CarHistory\\WebAPI\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Personal\\Projects\\CarHistory\\WebAPI\\WebAPI\\WebAPI.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gbarzu\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.6\\microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512",
     "C:\\Users\\gbarzu\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",

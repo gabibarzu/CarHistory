@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using WebAPI.Models;
+using WebAPI.Core.Models;
 
-namespace WebAPI.Controllers
+namespace WebAPI.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

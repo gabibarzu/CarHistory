@@ -1,0 +1,15 @@
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\bin\Debug\netcoreapp3.1\WebAPI.Infrastructure.deps.json
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\bin\Debug\netcoreapp3.1\WebAPI.Infrastructure.runtimeconfig.json
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\bin\Debug\netcoreapp3.1\WebAPI.Infrastructure.runtimeconfig.dev.json
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\bin\Debug\netcoreapp3.1\WebAPI.Infrastructure.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\bin\Debug\netcoreapp3.1\WebAPI.Infrastructure.pdb
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\bin\Debug\netcoreapp3.1\WebAPI.Core.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\bin\Debug\netcoreapp3.1\WebAPI.Core.pdb
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\obj\Debug\netcoreapp3.1\WebAPI.Infrastructure.csprojAssemblyReference.cache
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\obj\Debug\netcoreapp3.1\WebAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\obj\Debug\netcoreapp3.1\WebAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\obj\Debug\netcoreapp3.1\WebAPI.Infrastructure.AssemblyInfo.cs
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\obj\Debug\netcoreapp3.1\WebAPI.Infrastructure.csproj.CopyComplete
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\obj\Debug\netcoreapp3.1\WebAPI.Infrastructure.dll
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\obj\Debug\netcoreapp3.1\WebAPI.Infrastructure.pdb
+C:\Personal\Projects\CarHistory\WebAPI\WebAPI.Infrastructure\obj\Debug\netcoreapp3.1\WebAPI.Infrastructure.genruntimeconfig.cache

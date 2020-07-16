@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using WebAPI.Models;
+using WebAPI.Core.Models;
+using WebAPI.Infrastructure.DataAccess;
 
-namespace WebAPI.Controllers
+namespace WebAPI.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

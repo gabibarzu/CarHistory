@@ -3,10 +3,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebAPI.Infrastructure.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class AddTranslations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "translation");
+
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -46,6 +49,64 @@ namespace WebAPI.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Areas",
+                schema: "translation",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    Key = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Areas", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Languages",
+                schema: "translation",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    Key = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Languages", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Resources",
+                schema: "translation",
+                columns: table => new
+                {
+                    Key = table.Column<string>(nullable: false),
+                    AreaId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Resources", x => x.Key);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Translations",
+                schema: "translation",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    LanguageId = table.Column<int>(nullable: false),
+                    Key = table.Column<string>(nullable: true),
+                    Value = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Translations", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -210,6 +271,22 @@ namespace WebAPI.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Areas",
+                schema: "translation");
+
+            migrationBuilder.DropTable(
+                name: "Languages",
+                schema: "translation");
+
+            migrationBuilder.DropTable(
+                name: "Resources",
+                schema: "translation");
+
+            migrationBuilder.DropTable(
+                name: "Translations",
+                schema: "translation");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

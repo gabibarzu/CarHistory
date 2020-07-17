@@ -9,9 +9,9 @@ using WebAPI.Infrastructure.DataAccess;
 
 namespace WebAPI.Infrastructure.Migrations
 {
-    [DbContext(typeof(AuthenticationContext))]
-    [Migration("20200716100141_Initial-Migration")]
-    partial class InitialMigration
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20200716195142_Add-Translations")]
+    partial class AddTranslations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -227,7 +227,76 @@ namespace WebAPI.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("WebAPI.Core.Models.ApplicationUser", b =>
+            modelBuilder.Entity("WebAPI.Core.Models.Translations.Area", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Areas","translation");
+                });
+
+            modelBuilder.Entity("WebAPI.Core.Models.Translations.Language", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Languages","translation");
+                });
+
+            modelBuilder.Entity("WebAPI.Core.Models.Translations.Resource", b =>
+                {
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AreaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Key");
+
+                    b.ToTable("Resources","translation");
+                });
+
+            modelBuilder.Entity("WebAPI.Core.Models.Translations.Translation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Translations","translation");
+                });
+
+            modelBuilder.Entity("WebAPI.Core.Models.Authentication.ApplicationUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 

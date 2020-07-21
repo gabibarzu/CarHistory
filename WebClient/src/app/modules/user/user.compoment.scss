@@ -1,29 +1,30 @@
+@import "src/assets/styles/variables.scss";
+
 ::ng-deep {
   input.form-control,
   input.form-control:focus {
-    background-color: #636b7b;
-    color: #fff;
-    border: 1px solid #636b7b;
+    background-color: $pale-gray;
+    color: $black;
+    border: 1px solid $pale-gray;
   }
 
   input.form-control:focus {
     box-shadow: none;
   }
 
-  button[type="submit"].btn {
-    border-radius: 20px;
-    background-color: #04c582;
-    color: #fff;
+  div.form-group {
+    label {
+      margin-bottom: 0rem;
+    }
   }
 
   div.form-group label:not(.text-danger) {
-    color: #545d6a;
-    font-weight: 700;
+    color: $pale-gray;
   }
 
   div.form-group.required > label:first-child:after {
     content: "*";
-    color: #fff;
+    color: $pale-gray;
     padding-left: 5px;
   }
 
@@ -37,16 +38,17 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding: 20px;
+    padding: 50px 20px;
   }
 
   .wrapped-div {
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
-    background: #2e3137;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: $black;
     padding: 30px;
     width: 90%;
     max-width: 450px;
+    min-height: 530px;
     position: relative;
     padding: 0px;
     -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
@@ -59,19 +61,22 @@
   }
 
   .tab-header h2.active {
-    color: #fff;
-    border-bottom: 4px solid #fff;
+    color: $white;
+    border-bottom: 2px solid $white;
   }
 
   .tab-header h2 {
     text-align: center;
     font-size: 18px;
-    font-weight: 600;
-    display: inline-block;
-    padding: 30px 40px 10px 40px;
+    padding: 20px 0 10px 0;
     cursor: pointer;
-    color: #545d6a;
-    border-bottom: 2px solid #545d6a;
+    color: $pale-black;
+    border-bottom: 2px solid $pale-black;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: $gray;
+      border-color: $gray;
+    }
   }
 
   .tab-header h2:focus {
@@ -79,15 +84,12 @@
   }
 
   form {
-    margin: 0px 16px;
+    margin: 0px 15px;
   }
 
-  div.form-group input.invalid {
-    border: 1px solid #dc3545;
-  }
-
-  div.form-group label:first-child {
-    text-transform: uppercase;
-    font-size: 0.9rem;
+  label.text-danger {
+    position: absolute;
+    font-size: 12px;
+    margin-top: 2px;
   }
 }

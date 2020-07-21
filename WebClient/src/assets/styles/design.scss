@@ -1,0 +1,118 @@
+@import "src/assets/styles/variables.scss";
+
+// Button section
+button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn {
+  border-radius: 5px;
+  color: $white;
+  background-color: $accent-primary;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  border: none;
+
+  &:hover {
+    color: $white;
+    background-color: $primary;
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $accent-primary;
+      color: $white;
+    }
+  }
+
+  &:focus,
+  &:active {
+    background-color: $primary !important;
+    color: $white !important;
+  }
+
+  &.btn-success {
+    background-color: $accent-success;
+
+    &:hover {
+      color: $white;
+      background-color: $success;
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: $accent-success;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn-danger {
+    background-color: $accent-danger;
+
+    &:hover {
+      color: $white;
+      background-color: $danger;
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: $accent-danger;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn-warning {
+    background-color: $accent-warning;
+
+    &:hover {
+      color: $white;
+      background-color: $warning;
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: $accent-warning;
+        color: $white;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $accent-warning;
+      color: $white;
+    }
+  }
+
+  &.btn-primary {
+    background-color: $primary;
+
+    &:hover {
+      color: $primary;
+      background-color: $white;
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: $primary;
+        color: $white;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+// Text section
+.text-success {
+  color: $success !important;
+}
+
+.text-warning {
+  color: $warning !important;
+}
+
+.text-danger {
+  color: $danger !important;
+}

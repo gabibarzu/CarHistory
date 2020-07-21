@@ -1,5 +1,8 @@
 @import "~ngx-toastr/toastr";
+@import "src/assets/styles/variables.scss";
+@import "src/assets/styles/design.scss";
 
 body {
-  background-color: #04c582;
+  background-color: $primary;
+  font-family: "Montserrat", sans-serif;
 }

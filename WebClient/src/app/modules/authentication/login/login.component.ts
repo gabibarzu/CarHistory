@@ -1,5 +1,5 @@
 import { ToastrService } from 'ngx-toastr';
-import { UserService } from '../../../shared/user.service';
+import { AuthenticationService } from '../../../shared/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
     UserName: '',
     Password: ''
   }
-  constructor(private service: UserService, private router: Router, private toastr: ToastrService) { }
+  constructor(private service: AuthenticationService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
     if (localStorage.getItem('token') != null)

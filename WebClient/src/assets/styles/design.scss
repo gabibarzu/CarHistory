@@ -44,6 +44,12 @@ button:focus {
         color: $white;
       }
     }
+
+    &:focus,
+    &:active {
+      background-color: $success !important;
+      color: $white !important;
+    }
   }
 
   &.btn-danger {
@@ -58,6 +64,12 @@ button:focus {
         background-color: $accent-danger;
         color: $white;
       }
+    }
+
+    &:focus,
+    &:active {
+      background-color: $danger !important;
+      color: $white !important;
     }
   }
 
@@ -79,6 +91,12 @@ button:focus {
       cursor: not-allowed;
       background-color: $accent-warning;
       color: $white;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $warning !important;
+      color: $white !important;
     }
   }
 

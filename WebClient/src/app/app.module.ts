@@ -8,10 +8,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { UserService } from './shared/user.service';
-import { UserComponent } from './modules/user/user.component';
-import { RegistrationComponent } from './modules/user/registration/registration.component';
-import { LoginComponent } from './modules/user/login/login.component';
+import { AuthenticationService } from './shared/authentication.service';
+import { AuthenticationComponent } from './modules/authentication/authentication.component';
+import { RegistrationComponent } from './modules/authentication/registration/registration.component';
+import { LoginComponent } from './modules/authentication/login/login.component';
 import { HomeComponent } from './modules/home/home.component';
 import { AuthInterceptor } from './core/auth/auth.interceptor';
 
@@ -19,7 +19,7 @@ import { AuthInterceptor } from './core/auth/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
+    AuthenticationComponent,
     RegistrationComponent,
     LoginComponent,
     HomeComponent
@@ -35,7 +35,7 @@ import { AuthInterceptor } from './core/auth/auth.interceptor';
     }),
     FormsModule
   ],
-  providers: [UserService, {
+  providers: [AuthenticationService, {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true

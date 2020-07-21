@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserComponent } from './modules/user/user.component';
-import { RegistrationComponent } from './modules/user/registration/registration.component';
-import { LoginComponent } from './modules/user/login/login.component';
+import { AuthenticationComponent } from './modules/authentication/authentication.component';
+import { RegistrationComponent } from './modules/authentication/registration/registration.component';
+import { LoginComponent } from './modules/authentication/login/login.component';
 import { AuthGuard } from './core/auth/auth.guard';
 import { HomeComponent } from './modules/home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/user/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/authentication/login', pathMatch: 'full' },
   {
-    path: 'user', component: UserComponent,
+    path: 'authentication', component: AuthenticationComponent,
     children: [
       { path: 'registration', component: RegistrationComponent },
       { path: 'login', component: LoginComponent }

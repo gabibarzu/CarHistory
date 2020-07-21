@@ -1,5 +1,5 @@
 
-import { UserService } from '../../shared/user.service';
+import { AuthenticationService } from '../../shared/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   userDetails;
 
-  constructor(private router: Router, private service: UserService) { }
+  constructor(private router: Router, private service: AuthenticationService) { }
 
   ngOnInit() {
     this.service.getUserProfile().subscribe(
@@ -27,6 +27,6 @@ export class HomeComponent implements OnInit {
 
   onLogout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/user/login']);
+    this.router.navigate(['/authentication/login']);
   }
 }

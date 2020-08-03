@@ -28,10 +28,12 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/home');
       },
       err => {
-        if (err.status == 400)
+        if (err.status == 400) {
           this.toastr.error('Incorrect username or password.', 'Authentication failed.');
-        else
-          console.log(err);
+        }
+        else {
+          this.toastr.error('Something bad happend.', 'Ups!');
+        }
       }
     );
   }

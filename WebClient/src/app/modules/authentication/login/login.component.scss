@@ -1,5 +1,11 @@
+@import "src/assets/styles/variables.scss";
+
 img {
   width: 175px;
   height: 175px;
   margin: 20px 0;
+}
+
+#shirt {
+  fill: $primary;
 }

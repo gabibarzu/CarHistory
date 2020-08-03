@@ -134,3 +134,15 @@ button:focus {
 .text-danger {
   color: $danger !important;
 }
+
+.toast-success {
+  background-color: $success !important;
+}
+
+.toast-warning {
+  background-color: $warning !important;
+}
+
+.toast-error {
+  background-color: $danger !important;
+}

@@ -9,7 +9,7 @@ using WebAPI.Infrastructure.DataAccess;
 
 namespace WebAPI.Infrastructure.Migrations
 {
-    [DbContext(typeof(AuthenticationContext))]
+    [DbContext(typeof(DatabaseContext))]
     [Migration("20200716100141_Initial-Migration")]
     partial class InitialMigration
     {

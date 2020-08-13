@@ -1,11 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
+using WebAPI.Core.Models.Auto;
 
 namespace WebAPI.Core.Models.Authentication
 {
     public class ApplicationUser : IdentityUser
     {
-        [Column(TypeName ="nvarchar(150)")]
+        [Column(TypeName = "nvarchar(150)")]
         public string FullName { get; set; }
+        public List<Vehicle> Vehicles { get; set; }
     }
 }

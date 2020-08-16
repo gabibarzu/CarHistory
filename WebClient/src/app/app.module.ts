@@ -22,6 +22,7 @@ import { AddCarComponent } from './modules/home/preview-cars/add-car/add-car.com
 import { GarageComponent } from './modules/home/preview-cars/garage/garage.component';
 import { GarageIconComponent } from './shared/components/custom-icons/garage-icon/garage-icon.component';
 import { KeyIconComponent } from './shared/components/custom-icons/key-icon/key-icon.component';
+import { IconComponent } from './shared/components/icon/icon.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { KeyIconComponent } from './shared/components/custom-icons/key-icon/key-
     AddCarComponent,
     GarageComponent,
     GarageIconComponent,
-    KeyIconComponent
+    KeyIconComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,

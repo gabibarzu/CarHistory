@@ -16,11 +16,12 @@
       0 5px 20px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .favorite {
-    position: absolute;
-    color: $orange;
-    font-size: 40px;
-    top: 5px;
-    right: 5px;
+  ::ng-deep {
+    .favorite {
+      position: absolute;
+      color: $orange;
+      top: 5px;
+      right: 5px;
+    }
   }
 }

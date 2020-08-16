@@ -35,7 +35,7 @@ namespace WebAPI.Web
             services.AddDbContext<DatabaseContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
 
-            services.AddDefaultIdentity<ApplicationUser>()
+            services.AddDefaultIdentity<User>()
                 .AddEntityFrameworkStores<DatabaseContext>();
 
             services.Configure<IdentityOptions>(options =>

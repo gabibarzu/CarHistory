@@ -1,17 +1,12 @@
-<app-navigation></app-navigation>
+<app-navigation [userDetails]="userDetails"></app-navigation>
 
-<div class="container">
-  <div class="card" *ngIf="userDetails">
-    <ul class="list-group">
-      <li class="list-group-item">
-        <strong>Username : </strong>{{ userDetails.userName }}
-      </li>
-      <li class="list-group-item">
-        <strong>FullName : </strong>{{ userDetails.fullName }}
-      </li>
-      <li class="list-group-item">
-        <strong>Email : </strong>{{ userDetails.email }}
-      </li>
-    </ul>
+<div class="container home-section">
+  <div class="row">
+    <div class="col-12">
+      <h1>Welcome back, {{ userDetails.fullName }}!</h1>
+    </div>
   </div>
+  <hr />
+  <app-preview-cars></app-preview-cars>
+  <hr />
 </div>

@@ -6,7 +6,7 @@ namespace WebAPI.Core.Models.Auto
     [Table("Vehicles", Schema = "auto")]
     public class Vehicle
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string RegistrationNumber { get; set; }
         public string VIN { get; set; }
         public string Brand { get; set; }

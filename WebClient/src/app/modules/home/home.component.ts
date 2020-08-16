@@ -1,17 +1,16 @@
 
 import { AuthenticationService } from '../authentication/authentication.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styles: ['./home.component.scss']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  userDetails;
+  userDetails: any;
 
-  constructor(private router: Router, private service: AuthenticationService) { }
+  constructor(private service: AuthenticationService) { }
 
   ngOnInit() {
     this.service.getUserProfile().subscribe(
@@ -22,10 +21,5 @@ export class HomeComponent implements OnInit {
         console.log(err);
       },
     );
-  }
-
-  onLogout() {
-    localStorage.removeItem('token');
-    this.router.navigate(['/authentication/login']);
   }
 }

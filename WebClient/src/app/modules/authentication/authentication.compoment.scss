@@ -6,7 +6,7 @@
     background-color: $pale-gray;
     color: $black;
     border: 1px solid $pale-gray;
-    transition: 0.3s ease-in-out;
+    @include transition;
   }
 
   input.form-control:focus {
@@ -74,7 +74,7 @@
     cursor: pointer;
     color: $pale-black;
     border-bottom: 2px solid $pale-black;
-    transition: 0.3s ease-in-out;
+    @include transition;
     &:hover {
       color: $gray;
       border-color: $gray;

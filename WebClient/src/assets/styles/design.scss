@@ -10,7 +10,7 @@ button:focus {
   border-radius: 5px;
   color: $white;
   background-color: $accent-primary;
-  transition: 0.3s ease-in-out;
+  @include transition;
   outline: none;
   border: none;
 
@@ -135,6 +135,11 @@ button:focus {
   color: $danger !important;
 }
 
+.text-bold {
+  font-weight: 700;
+}
+
+// Toastr section
 .toast-success {
   background-color: $success !important;
 }

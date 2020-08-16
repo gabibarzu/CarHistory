@@ -30,6 +30,7 @@ $gray: #808e9b;
 $pale-black: #485460;
 $black: #1e272e;
 
+$pale-white: #ecf0f1;
 $white: #ffffff;
 
 // App colors:
@@ -45,3 +46,11 @@ $accent-warning: $pale-orange;
 
 $success: $green;
 $accent-success: $pale-green;
+
+// Mixins
+@mixin transition {
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}

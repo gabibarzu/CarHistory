@@ -1,0 +1,17 @@
+@import "src/assets/styles/variables.scss";
+
+.garage-color {
+  fill: $primary;
+}
+
+.garage-inside-color {
+  fill: $pale-gray;
+}
+
+.garage-inside-pale-color {
+  fill: $pale-white;
+}
+
+.outline {
+  fill: $black;
+}

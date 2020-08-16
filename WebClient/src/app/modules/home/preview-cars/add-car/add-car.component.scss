@@ -1,0 +1,17 @@
+@import "src/assets/styles/variables.scss";
+
+.add-car-container {
+  min-height: 320px;
+  background-color: $pale-gray;
+  padding: 20px 50px;
+  border-radius: 5px;
+  @include transition;
+
+  &:hover {
+    background-color: $pale-black;
+    color: $white;
+    cursor: pointer;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2),
+      0 5px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+}

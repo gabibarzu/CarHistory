@@ -12,8 +12,8 @@ namespace WebAPI.Web.Controllers.Authentication
     [ApiController]
     public class UserProfileController : ControllerBase
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        public UserProfileController(UserManager<ApplicationUser> userManager)
+        private readonly UserManager<User> _userManager;
+        public UserProfileController(UserManager<User> userManager)
         {
             _userManager = userManager;
         }

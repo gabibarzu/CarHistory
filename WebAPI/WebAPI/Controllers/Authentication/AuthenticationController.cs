@@ -16,11 +16,11 @@ namespace WebAPI.Web.Controllers.Authentication
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _singInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _singInManager;
         private readonly ApplicationSettings _appSettings;
 
-        public AuthenticationController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<ApplicationSettings> appSettings)
+        public AuthenticationController(UserManager<User> userManager, SignInManager<User> signInManager, IOptions<ApplicationSettings> appSettings)
         {
             _userManager = userManager;
             _singInManager = signInManager;
@@ -29,10 +29,10 @@ namespace WebAPI.Web.Controllers.Authentication
 
         [HttpPost]
         [Route("Register")]
-        //POST : /api/ApplicationUser/Register
-        public async Task<Object> PostApplicationUser(ApplicationUserModel model)
+        //POST : /api/User/Register
+        public async Task<Object> PostUser(UserModel model)
         {
-            var applicationUser = new ApplicationUser()
+            var user = new User()
             {
                 UserName = model.UserName,
                 Email = model.Email,
@@ -41,7 +41,7 @@ namespace WebAPI.Web.Controllers.Authentication
 
             try
             {
-                var result = await _userManager.CreateAsync(applicationUser, model.Password);
+                var result = await _userManager.CreateAsync(user, model.Password);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -52,7 +52,7 @@ namespace WebAPI.Web.Controllers.Authentication
 
         [HttpPost]
         [Route("Login")]
-        //POST : /api/ApplicationUser/Login
+        //POST : /api/User/Login
         public async Task<IActionResult> Login(LoginModel model)
         {
             var user = await _userManager.FindByNameAsync(model.UserName);

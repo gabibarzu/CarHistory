@@ -3,10 +3,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebAPI.Infrastructure.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class RefactorVehicleModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "auto");
+
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -154,6 +157,35 @@ namespace WebAPI.Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Vehicles",
+                schema: "auto",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RegistrationNumber = table.Column<string>(nullable: true),
+                    VIN = table.Column<string>(nullable: true),
+                    Brand = table.Column<string>(nullable: true),
+                    Model = table.Column<string>(nullable: true),
+                    Type = table.Column<int>(nullable: false),
+                    Fuel = table.Column<int>(nullable: false),
+                    Color = table.Column<string>(nullable: true),
+                    IsFavorite = table.Column<bool>(nullable: false),
+                    Added = table.Column<DateTime>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Vehicles", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Vehicles_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -192,6 +224,12 @@ namespace WebAPI.Infrastructure.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Vehicles_UserId",
+                schema: "auto",
+                table: "Vehicles",
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -210,6 +248,10 @@ namespace WebAPI.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Vehicles",
+                schema: "auto");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

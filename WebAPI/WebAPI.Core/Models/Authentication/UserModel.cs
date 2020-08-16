@@ -1,6 +1,6 @@
 ﻿namespace WebAPI.Core.Models.Authentication
 {
-    public class ApplicationUserModel
+    public class UserModel
     {
         public string UserName { get; set; }
         public string Email { get; set; }

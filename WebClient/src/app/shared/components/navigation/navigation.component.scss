@@ -1,0 +1,40 @@
+@import "src/assets/styles/variables.scss";
+
+.bg-dark {
+  background-color: $black !important;
+}
+
+.navbar-dark .navbar-nav {
+  .nav-item {
+    .nav-link {
+      color: $pale-gray !important;
+      @include transition;
+
+      &:hover {
+        color: $white !important;
+      }
+
+      &[aria-expanded="true"] {
+        color: $white !important;
+      }
+    }
+
+    .dropdown-item {
+      @include transition;
+      &:hover {
+        background-color: $pale-gray !important;
+        cursor: pointer;
+      }
+
+      &:focus {
+        color: $white;
+        background-color: $gray !important;
+        outline: none;
+      }
+
+      &:active {
+        background-color: $black !important;
+      }
+    }
+  }
+}

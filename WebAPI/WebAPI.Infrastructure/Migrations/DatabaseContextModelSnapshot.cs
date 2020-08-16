@@ -9,7 +9,7 @@ using WebAPI.Infrastructure.DataAccess;
 namespace WebAPI.Infrastructure.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class AuthenticationContextModelSnapshot : ModelSnapshot
+    partial class DatabaseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -227,15 +227,25 @@ namespace WebAPI.Infrastructure.Migrations
 
             modelBuilder.Entity("WebAPI.Core.Models.Auto.Vehicle", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<DateTime>("Added")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Color")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Fuel")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsFavorite")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Model")
                         .HasColumnType("nvarchar(max)");
@@ -246,24 +256,27 @@ namespace WebAPI.Infrastructure.Migrations
                     b.Property<int>("Type")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("VIN")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ApplicationUserId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Vehicles","auto");
                 });
 
-            modelBuilder.Entity("WebAPI.Core.Models.Authentication.ApplicationUser", b =>
+            modelBuilder.Entity("WebAPI.Core.Models.Authentication.User", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(150)");
 
-                    b.HasDiscriminator().HasValue("ApplicationUser");
+                    b.HasDiscriminator().HasValue("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -319,9 +332,9 @@ namespace WebAPI.Infrastructure.Migrations
 
             modelBuilder.Entity("WebAPI.Core.Models.Auto.Vehicle", b =>
                 {
-                    b.HasOne("WebAPI.Core.Models.Authentication.ApplicationUser", null)
+                    b.HasOne("WebAPI.Core.Models.Authentication.User", null)
                         .WithMany("Vehicles")
-                        .HasForeignKey("ApplicationUserId");
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

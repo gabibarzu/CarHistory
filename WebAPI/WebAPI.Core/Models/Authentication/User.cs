@@ -5,7 +5,7 @@ using WebAPI.Core.Models.Auto;
 
 namespace WebAPI.Core.Models.Authentication
 {
-    public class ApplicationUser : IdentityUser
+    public class User : IdentityUser
     {
         [Column(TypeName = "nvarchar(150)")]
         public string FullName { get; set; }

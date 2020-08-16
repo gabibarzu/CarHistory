@@ -14,13 +14,15 @@ namespace WebAPI.Infrastructure.DataAccess
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<ApplicationUser>();
+            builder.Entity<User>();
             builder.Entity<Vehicle>();
 
             base.OnModelCreating(builder);
         }
 
-        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+#pragma warning disable CS0114 // Member hides inherited member; missing override keyword
+        public DbSet<User> Users { get; set; }
+#pragma warning restore CS0114 // Member hides inherited member; missing override keyword
         public DbSet<Vehicle> Vehicles { get; set; }
     }
 }

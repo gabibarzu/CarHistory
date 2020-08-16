@@ -1,4 +1,4 @@
-﻿namespace WebAPI.Core.Models.Authentication
+﻿namespace WebAPI.Core.Models.Authentication.ToWeb
 {
     public class UserModel
     {

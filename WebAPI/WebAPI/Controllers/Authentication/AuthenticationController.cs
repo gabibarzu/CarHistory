@@ -9,6 +9,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using WebAPI.Core.Models.ApplicationCore;
 using WebAPI.Core.Models.Authentication;
+using WebAPI.Core.Models.Authentication.ToDomain;
+using WebAPI.Core.Models.Authentication.ToWeb;
 
 namespace WebAPI.Web.Controllers.Authentication
 {

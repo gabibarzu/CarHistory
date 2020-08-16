@@ -15,11 +15,11 @@ import { LoginComponent } from './modules/authentication/login/login.component';
 import { HomeComponent } from './modules/home/home.component';
 import { AuthInterceptor } from './core/auth/auth.interceptor';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
-import { PreviewCarsComponent } from './modules/home/preview-cars/preview-cars.component';
-import { CarComponent } from './modules/home/preview-cars/car/car.component';
-import { CarIconComponent } from './shared/components/custom-icons/car-icon/car-icon.component';
-import { AddCarComponent } from './modules/home/preview-cars/add-car/add-car.component';
-import { GarageComponent } from './modules/home/preview-cars/garage/garage.component';
+import { PreviewVehiclesComponent } from './modules/home/preview-vehicles/preview-vehicles.component';
+import { VehicleComponent } from './modules/home/preview-vehicles/vehicle/vehicle.component';
+import { VehicleIconComponent } from './shared/components/custom-icons/vehicle-icon/vehicle-icon.component';
+import { AddVehicleComponent } from './modules/home/preview-vehicles/add-vehicle/add-vehicle.component';
+import { GarageComponent } from './modules/home/preview-vehicles/garage/garage.component';
 import { GarageIconComponent } from './shared/components/custom-icons/garage-icon/garage-icon.component';
 import { KeyIconComponent } from './shared/components/custom-icons/key-icon/key-icon.component';
 import { IconComponent } from './shared/components/icon/icon.component';
@@ -33,10 +33,10 @@ import { IconComponent } from './shared/components/icon/icon.component';
     LoginComponent,
     HomeComponent,
     NavigationComponent,
-    PreviewCarsComponent,
-    CarComponent,
-    CarIconComponent,
-    AddCarComponent,
+    PreviewVehiclesComponent,
+    VehicleComponent,
+    VehicleIconComponent,
+    AddVehicleComponent,
     GarageComponent,
     GarageIconComponent,
     KeyIconComponent,

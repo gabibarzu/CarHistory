@@ -1,6 +1,7 @@
 @import "src/assets/styles/variables.scss";
 
-.add-car-container {
+.vehicle-container {
+  position: relative;
   min-height: 320px;
   background-color: $pale-gray;
   padding: 20px 50px;
@@ -13,5 +14,14 @@
     cursor: pointer;
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2),
       0 5px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  ::ng-deep {
+    .favorite {
+      position: absolute;
+      color: $orange;
+      top: 5px;
+      right: 5px;
+    }
   }
 }

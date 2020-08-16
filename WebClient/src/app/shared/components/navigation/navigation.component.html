@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/home">CarHistory</a>
+    <a class="navbar-brand" routerLink="/home">VehicleHistory</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -29,7 +29,7 @@
               <app-icon [item]="'account_box'"></app-icon> My profile
             </a>
             <a class="dropdown-item">
-              <app-icon [item]="'view_list'"></app-icon> My cars
+              <app-icon [item]="'view_list'"></app-icon> My vehicles
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text-danger" (click)="onLogout()">
@@ -41,7 +41,7 @@
           <a class="nav-link" href="#">My profile</a>
         </li>
         <li class="nav-item d-block d-sm-none">
-          <a class="nav-link" href="#">My cars</a>
+          <a class="nav-link" href="#">My vehicles</a>
         </li>
         <li class="nav-item d-block d-sm-none">
           <a class="nav-link" href="#">Logout</a>

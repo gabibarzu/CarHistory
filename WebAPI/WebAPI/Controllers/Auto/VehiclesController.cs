@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Core.Models.Auto;
+using WebAPI.Core.Models.Auto.ToWeb;
 using WebAPI.Infrastructure.DataAccess;
 
 namespace WebAPI.Web.Controllers.Auto
@@ -102,6 +103,27 @@ namespace WebAPI.Web.Controllers.Auto
             return vehicle;
         }
 
+        // GET: api/Vehicles/GetPreviewVehicles
+        [HttpGet]
+        [Route("GetPreviewVehicles")]
+        public async Task<ActionResult<PreviewVehicle>> GetPreviewVehicles()
+        {
+            var result = new PreviewVehicle();
+            var vehiclesDb = await _context.Vehicles.ToListAsync();
+            var vehicles = vehiclesDb.OrderByDescending(vehicle => vehicle.IsFavorite)
+                .ThenByDescending(vehicle => vehicle.Added).ToList();
+            if (vehicles.Count > 2)
+            {
+                result.HasGarage = true;
+                result.Vehicles = vehicles.Take(2).ToList();
+            }
+            else
+            {
+                result.HasGarage = false;
+                result.Vehicles = vehicles;
+            }
+            return result;
+        }
         private bool VehicleExists(int id)
         {
             return _context.Vehicles.Any(e => e.Id == id);

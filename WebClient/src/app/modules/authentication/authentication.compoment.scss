@@ -6,10 +6,12 @@
     background-color: $pale-gray;
     color: $black;
     border: 1px solid $pale-gray;
+    transition: 0.3s ease-in-out;
   }
 
   input.form-control:focus {
     box-shadow: none;
+    background-color: $white;
   }
 
   div.form-group {

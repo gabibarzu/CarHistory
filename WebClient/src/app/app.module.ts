@@ -8,12 +8,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { AuthenticationService } from './shared/authentication.service';
+import { AuthenticationService } from './modules/authentication/authentication.service';
 import { AuthenticationComponent } from './modules/authentication/authentication.component';
 import { RegistrationComponent } from './modules/authentication/registration/registration.component';
 import { LoginComponent } from './modules/authentication/login/login.component';
 import { HomeComponent } from './modules/home/home.component';
 import { AuthInterceptor } from './core/auth/auth.interceptor';
+import { NavigationComponent } from './shared/components/navigation/navigation.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AuthInterceptor } from './core/auth/auth.interceptor';
     AuthenticationComponent,
     RegistrationComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

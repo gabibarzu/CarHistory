@@ -1,5 +1,5 @@
 
-import { AuthenticationService } from '../../shared/authentication.service';
+import { AuthenticationService } from '../authentication/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
       },
     );
   }
-
 
   onLogout() {
     localStorage.removeItem('token');

@@ -1,4 +1,4 @@
-import { AuthenticationService } from '../../../shared/authentication.service';
+import { AuthenticationService } from '../authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 

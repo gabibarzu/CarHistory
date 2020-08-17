@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" *ngIf="fullName">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/home">VehicleHistory</a>
     <button
@@ -20,9 +20,8 @@
             href="#"
             id="navbardrop"
             data-toggle="dropdown"
-            *ngIf="userDetails"
           >
-            {{ userDetails.fullName }}
+            {{ fullName }}
           </a>
           <div class="dropdown-menu">
             <a class="dropdown-item">

@@ -14,6 +14,9 @@ export class LoginComponent implements OnInit {
     UserName: '',
     Password: ''
   }
+
+  userDetails: any;
+
   constructor(private service: AuthenticationService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
@@ -25,9 +28,18 @@ export class LoginComponent implements OnInit {
     this.service.login(form.value).subscribe(
       (res: any) => {
         localStorage.setItem('token', res.token);
+        this.service.getUserProfile().subscribe(
+          res => {
+            this.userDetails = res;
+            localStorage.setItem('fullName', this.userDetails.fullName);
+          },
+          err => {
+            console.log(err);
+          },
+        );
         this.router.navigateByUrl('/home');
       },
-      err => {
+      (err: any) => {
         if (err.status == 400) {
           this.toastr.error('Incorrect username or password.', 'Authentication failed.');
         }

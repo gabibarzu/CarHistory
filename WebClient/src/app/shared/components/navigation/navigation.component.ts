@@ -7,13 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  @Input() userDetails: any;
-
   constructor(private router: Router) {
+  }
+
+  get fullName() {
+    return localStorage.getItem('fullName');
   }
 
   onLogout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('fullName');
     this.router.navigate(['/authentication/login']);
   }
 }

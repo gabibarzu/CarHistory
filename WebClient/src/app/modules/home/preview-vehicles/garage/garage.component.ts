@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-garage',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./garage.component.scss']
 })
 export class GarageComponent implements OnInit {
-
+  @Input() vehiclesInGarage: number;
   constructor() { }
 
   ngOnInit(): void {

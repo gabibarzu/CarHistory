@@ -2,6 +2,39 @@
 
 .vehicle-color {
   fill: $primary;
+
+  &.car- {
+    &pink {
+      fill: $pink;
+    }
+    &purple {
+      fill: $purple;
+    }
+    &blue {
+      fill: $blue;
+    }
+    &green {
+      fill: $green;
+    }
+    &orange {
+      fill: $orange;
+    }
+    &yellow {
+      fill: $yellow;
+    }
+    &red {
+      fill: $red;
+    }
+    &gray {
+      fill: $gray;
+    }
+    &black {
+      fill: $black;
+    }
+    &white {
+      fill: $white;
+    }
+  }
 }
 
 .vehicle-inside {

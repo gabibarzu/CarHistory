@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Core.Models.Auto;
@@ -116,11 +115,13 @@ namespace WebAPI.Web.Controllers.Auto
             {
                 result.HasGarage = true;
                 result.Vehicles = vehicles.Take(2).ToList();
+                result.VehiclesInGarage = vehicles.Count - 2;
             }
             else
             {
                 result.HasGarage = false;
                 result.Vehicles = vehicles;
+                result.VehiclesInGarage = 0;
             }
             return result;
         }

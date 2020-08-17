@@ -1,9 +1,20 @@
-<div class="vehicle-container text-center">
-  <app-icon [item]="'grade'" size="large" class="favorite"></app-icon>
+<div class="vehicle-container text-center" *ngIf="vehicle">
+  <app-icon
+    [item]="'grade'"
+    size="large"
+    class="favorite"
+    *ngIf="vehicle.isFavorite"
+  ></app-icon>
   <div class="vehicle-image">
-    <app-vehicle-icon></app-vehicle-icon>
+    <app-vehicle-icon [color]="vehicle.color"></app-vehicle-icon>
   </div>
-  <h3 class="vehicle-name pt-3 text-bold">Audi A6</h3>
-  <h4 class="vehicle-number">IS22AGB</h4>
-  <h5 class="vehicle-date">2020-08-16</h5>
+  <div class="pb-3 pt-3">
+    <h3 class="vehicle-name text-bold">
+      {{ vehicle.brand }}
+    </h3>
+    <h4 class="vehicle-name text-bold">
+      {{ vehicle.model }}
+    </h4>
+    <h5 class="vehicle-number">{{ vehicle.registrationNumber }}</h5>
+  </div>
 </div>

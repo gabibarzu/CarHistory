@@ -13,7 +13,7 @@ import { AuthenticationComponent } from './modules/authentication/authentication
 import { RegistrationComponent } from './modules/authentication/registration/registration.component';
 import { LoginComponent } from './modules/authentication/login/login.component';
 import { HomeComponent } from './modules/home/home.component';
-import { AuthInterceptor } from './core/auth/auth.interceptor';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
 import { PreviewVehiclesComponent } from './modules/home/preview-vehicles/preview-vehicles.component';
 import { VehicleComponent } from './modules/home/preview-vehicles/vehicle/vehicle.component';

@@ -1,6 +1,6 @@
 <app-navigation [userDetails]="userDetails"></app-navigation>
 
-<div class="container home-section">
+<div class="container home-section" *ngIf="userDetails">
   <div class="row">
     <div class="col-12">
       <h1>Welcome back, {{ userDetails.fullName }}!</h1>

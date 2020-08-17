@@ -1,14 +1,14 @@
-<div class="row">
-  <div class="col-lg-3 col-sm-6 col-12 mt-3 mb-3">
-    <app-vehicle></app-vehicle>
+<div class="row" *ngIf="preview && previewClasses">
+  <div class="mt-3 mb-3" [ngClass]="previewClasses.firstVehicleStyle">
+    <app-vehicle [vehicle]="preview.vehicles[0]"></app-vehicle>
   </div>
-  <div class="col-lg-3 col-sm-6 col-12 mt-3 mb-3">
-    <app-vehicle></app-vehicle>
+  <div class="mt-3 mb-3" [ngClass]="previewClasses.secondVehicleStyle">
+    <app-vehicle [vehicle]="preview.vehicles[1]"></app-vehicle>
   </div>
-  <div class="col-lg-3 col-sm-6 col-12 mt-3 mb-3">
-    <app-garage></app-garage>
+  <div class="mt-3 mb-3" [ngClass]="previewClasses.garageStyle">
+    <app-garage [vehiclesInGarage]="preview.vehiclesInGarage"></app-garage>
   </div>
-  <div class="col-lg-3 col-sm-6 col-12 mt-3 mb-3">
+  <div class="mt-3 mb-3" [ngClass]="previewClasses.addStyle">
     <app-add-vehicle></app-add-vehicle>
   </div>
 </div>

@@ -1,0 +1,13 @@
+.col-lg-4 {
+  ::ng-deep {
+    .vehicle-container {
+      min-height: 415px;
+    }
+    .garage-container {
+      min-height: 415px;
+    }
+    .add-vehicle-container {
+      min-height: 415px;
+    }
+  }
+}

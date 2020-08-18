@@ -1,0 +1,24 @@
+@import "src/assets/styles/variables.scss";
+
+.tile {
+  border-radius: 5px;
+  background: $black;
+  color: $white;
+  @include box-shadow-30;
+
+  .tile-header {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 2px solid $white;
+  }
+
+  .tile-body {
+    padding: 20px 10px;
+  }
+
+  .tile-footer {
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 2px solid $white;
+  }
+}

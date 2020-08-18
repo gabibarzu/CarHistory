@@ -54,3 +54,11 @@ $accent-success: $pale-green;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
+
+@mixin box-shadow-15 {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin box-shadow-30 {
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.2);
+}

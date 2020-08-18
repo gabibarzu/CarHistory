@@ -8,17 +8,35 @@
 
   .tile-header {
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 30px;
     border-bottom: 2px solid $white;
   }
 
   .tile-body {
-    padding: 20px 10px;
+    padding: 20px 30px;
   }
 
   .tile-footer {
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 30px;
     border-top: 2px solid $white;
+  }
+}
+
+.vehicle-type {
+  background-color: $pale-white;
+  border-radius: 5px;
+  padding: 0.75rem;
+  @include transition;
+
+  &:hover {
+    background-color: $white;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  &.selected {
+    background-color: $primary;
+    transform: scale(1.05);
   }
 }

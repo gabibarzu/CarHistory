@@ -3,13 +3,45 @@
     <div class="offset-lg-3 col-lg-6 col-12 mt-5">
       <div class="tile">
         <div class="tile-header">
-          <h3>Add new car</h3>
+          <h3 class="mb-0">Add new car</h3>
         </div>
         <div class="tile-body">
-          <h5>test</h5>
+          <div class="form-group mb-1">
+            <label>Select your vehicle type:</label>
+          </div>
+          <div class="row">
+            <div class="col-4" (click)="selectVehicleType(1)">
+              <div
+                class="vehicle-type"
+                [ngClass]="{ selected: selectedVehicleType === 1 }"
+              >
+                <app-motorcycle-icon></app-motorcycle-icon>
+              </div>
+            </div>
+            <div class="col-4" (click)="selectVehicleType(2)">
+              <div
+                class="vehicle-type"
+                [ngClass]="{ selected: selectedVehicleType === 2 }"
+              >
+                <app-car-icon></app-car-icon>
+              </div>
+            </div>
+            <div class="col-4" (click)="selectVehicleType(3)">
+              <div
+                class="vehicle-type"
+                [ngClass]="{ selected: selectedVehicleType === 3 }"
+              >
+                <app-truck-icon></app-truck-icon>
+              </div>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label>Registration number</label>
+            <input class="form-control" />
+          </div>
           <div class="form-group">
-            <label>Username</label>
-            <input class="form-control" name="UserName" required />
+            <label>VIN</label>
+            <input class="form-control" />
           </div>
         </div>
         <div class="tile-footer">

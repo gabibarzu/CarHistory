@@ -35,7 +35,7 @@ export class RegistrationComponent implements OnInit {
           });
         }
       },
-      err => {
+      (err: any) => {
         console.log(err);
       }
     );

@@ -15,11 +15,11 @@ export class PreviewVehiclesComponent implements OnInit {
 
   ngOnInit() {
     this.service.getPreviewVehicles().subscribe(
-      res => {
+      (res: any) => {
         this.preview = res;
         this.setClasses();
       },
-      err => {
+      (err: any) => {
         console.log(err);
       },
     );

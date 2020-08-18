@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-motorcycle-icon',
   templateUrl: './motorcycle-icon.component.html',
   styleUrls: ['./motorcycle-icon.component.scss']
 })
-export class MotorcycleIconComponent implements OnInit {
+export class MotorcycleIconComponent {
+  @Input() color: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  get colorClass() {
+    return 'motorcycle-' + this.color;
   }
-
 }

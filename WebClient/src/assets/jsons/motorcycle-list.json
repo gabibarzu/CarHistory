@@ -1,0 +1,362 @@
+[
+  {
+    "brand": "AJP"
+  },
+  {
+    "brand": "Adiva"
+  },
+  {
+    "brand": "Aeon"
+  },
+  {
+    "brand": "Aprilia"
+  },
+  {
+    "brand": "Aspess Power"
+  },
+  {
+    "brand": "Axy"
+  },
+  {
+    "brand": "Azel"
+  },
+  {
+    "brand": "BMW"
+  },
+  {
+    "brand": "Bajaj"
+  },
+  {
+    "brand": "Benelli"
+  },
+  {
+    "brand": "Beta"
+  },
+  {
+    "brand": "Bimota"
+  },
+  {
+    "brand": "Borile"
+  },
+  {
+    "brand": "Boss Hoss"
+  },
+  {
+    "brand": "Buell"
+  },
+  {
+    "brand": "Bultaco"
+  },
+  {
+    "brand": "CCM"
+  },
+  {
+    "brand": "CF Moto"
+  },
+  {
+    "brand": "CH Racing"
+  },
+  {
+    "brand": "CMC"
+  },
+  {
+    "brand": "CPI"
+  },
+  {
+    "brand": "CR&S"
+  },
+  {
+    "brand": "Cagiva"
+  },
+  {
+    "brand": "Dado Motors"
+  },
+  {
+    "brand": "Daelim"
+  },
+  {
+    "brand": "Derbi"
+  },
+  {
+    "brand": "Ducati"
+  },
+  {
+    "brand": "E-Tropolis"
+  },
+  {
+    "brand": "E-max"
+  },
+  {
+    "brand": "Ecomission"
+  },
+  {
+    "brand": "Fantic Motor"
+  },
+  {
+    "brand": "Garelli"
+  },
+  {
+    "brand": "Gas Gas"
+  },
+  {
+    "brand": "Generic"
+  },
+  {
+    "brand": "Ghezzi-Brian"
+  },
+  {
+    "brand": "GiMotori"
+  },
+  {
+    "brand": "GiPuma"
+  },
+  {
+    "brand": "Gilera"
+  },
+  {
+    "brand": "Green Mobility Italia"
+  },
+  {
+    "brand": "HDM"
+  },
+  {
+    "brand": "HM"
+  },
+  {
+    "brand": "HP Power"
+  },
+  {
+    "brand": "Harley-Davidson"
+  },
+  {
+    "brand": "Headbanger"
+  },
+  {
+    "brand": "Honda"
+  },
+  {
+    "brand": "Honda Dall'Ara"
+  },
+  {
+    "brand": "Hupper"
+  },
+  {
+    "brand": "Husaberg"
+  },
+  {
+    "brand": "Husqvarna"
+  },
+  {
+    "brand": "Hyosung"
+  },
+  {
+    "brand": "Indian"
+  },
+  {
+    "brand": "Italjet"
+  },
+  {
+    "brand": "Jawa"
+  },
+  {
+    "brand": "KRC"
+  },
+  {
+    "brand": "KTM"
+  },
+  {
+    "brand": "Kawasaki"
+  },
+  {
+    "brand": "Kawasaki KL"
+  },
+  {
+    "brand": "Keeway"
+  },
+  {
+    "brand": "Kreidler"
+  },
+  {
+    "brand": "Kymco"
+  },
+  {
+    "brand": "LML"
+  },
+  {
+    "brand": "Lambretta"
+  },
+  {
+    "brand": "Laverda"
+  },
+  {
+    "brand": "Leonart"
+  },
+  {
+    "brand": "Lingben"
+  },
+  {
+    "brand": "Linhai"
+  },
+  {
+    "brand": "MBK"
+  },
+  {
+    "brand": "MV Agusta"
+  },
+  {
+    "brand": "MZ"
+  },
+  {
+    "brand": "Magni"
+  },
+  {
+    "brand": "Maico"
+  },
+  {
+    "brand": "Malaguti"
+  },
+  {
+    "brand": "Mash"
+  },
+  {
+    "brand": "Millepercento"
+  },
+  {
+    "brand": "Mondial"
+  },
+  {
+    "brand": "Montesa"
+  },
+  {
+    "brand": "Moto Bellini"
+  },
+  {
+    "brand": "Moto Guzzi"
+  },
+  {
+    "brand": "Moto Morini"
+  },
+  {
+    "brand": "Moto Rumi"
+  },
+  {
+    "brand": "MotoBi"
+  },
+  {
+    "brand": "Motom"
+  },
+  {
+    "brand": "Motor Union"
+  },
+  {
+    "brand": "Nipponia"
+  },
+  {
+    "brand": "Norton"
+  },
+  {
+    "brand": "Nox"
+  },
+  {
+    "brand": "Ossa"
+  },
+  {
+    "brand": "Over"
+  },
+  {
+    "brand": "PGO"
+  },
+  {
+    "brand": "Paton"
+  },
+  {
+    "brand": "Peda Motor"
+  },
+  {
+    "brand": "Peugeot"
+  },
+  {
+    "brand": "Piaggio"
+  },
+  {
+    "brand": "Polini"
+  },
+  {
+    "brand": "Quadro"
+  },
+  {
+    "brand": "Quantya"
+  },
+  {
+    "brand": "RedMoto Honda"
+  },
+  {
+    "brand": "Renault"
+  },
+  {
+    "brand": "Rieju"
+  },
+  {
+    "brand": "Royal Enfield"
+  },
+  {
+    "brand": "SWM"
+  },
+  {
+    "brand": "Sachs"
+  },
+  {
+    "brand": "Scorpa"
+  },
+  {
+    "brand": "Sherco"
+  },
+  {
+    "brand": "Siamoto"
+  },
+  {
+    "brand": "Steed"
+  },
+  {
+    "brand": "Suzuki"
+  },
+  {
+    "brand": "Suzuki Valenti"
+  },
+  {
+    "brand": "Sym"
+  },
+  {
+    "brand": "TGB"
+  },
+  {
+    "brand": "TM Racing"
+  },
+  {
+    "brand": "Terra Modena"
+  },
+  {
+    "brand": "Triumph"
+  },
+  {
+    "brand": "Ural"
+  },
+  {
+    "brand": "Vectrix"
+  },
+  {
+    "brand": "Vertemati"
+  },
+  {
+    "brand": "Victory"
+  },
+  {
+    "brand": "Vor"
+  },
+  {
+    "brand": "WT Motors"
+  },
+  {
+    "brand": "Yamaha"
+  }
+]

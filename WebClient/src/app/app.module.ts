@@ -25,6 +25,7 @@ import { VehicleComponent } from './modules/home/preview-vehicles/vehicle/vehicl
 import { AddVehicleComponent } from './modules/home/preview-vehicles/add-vehicle/add-vehicle.component';
 import { GarageComponent } from './modules/home/preview-vehicles/garage/garage.component';
 import { AddNewVehicleComponent } from './modules/add-new-vehicle/add-new-vehicle.component';
+import { VehicleService } from './core/services/vehicle.service';
 
 @NgModule({
   declarations: [
@@ -53,11 +54,13 @@ import { AddNewVehicleComponent } from './modules/add-new-vehicle/add-new-vehicl
     NavigationModule,
     IconModule
   ],
-  providers: [AuthenticationService, {
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true
-  }],
+  providers: [
+    AuthenticationService, {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    VehicleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

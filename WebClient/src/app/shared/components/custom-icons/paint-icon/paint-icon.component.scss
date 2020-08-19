@@ -1,9 +1,9 @@
 @import "src/assets/styles/variables.scss";
 
-.vehicle-color {
+.paint {
   fill: $primary;
 
-  &.car- {
+  &.paint- {
     &pink {
       fill: $pink;
     }
@@ -38,16 +38,4 @@
       fill: $white;
     }
   }
-}
-
-.vehicle-inside {
-  fill: $pale-white;
-}
-
-.tyre {
-  fill: $gray;
-}
-
-.outline {
-  fill: $black;
 }

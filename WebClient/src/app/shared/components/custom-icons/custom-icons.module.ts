@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MotorcycleIconComponent, TruckIconComponent, GarageIconComponent, KeyIconComponent, CarIconComponent } from '../custom-icons';
+import {
+  MotorcycleIconComponent,
+  TruckIconComponent,
+  GarageIconComponent,
+  KeyIconComponent,
+  CarIconComponent,
+  FuelIconComponent,
+  PaintIconComponent
+} from '../custom-icons';
 
 @NgModule({
   declarations: [
@@ -9,13 +17,17 @@ import { MotorcycleIconComponent, TruckIconComponent, GarageIconComponent, KeyIc
     KeyIconComponent,
     MotorcycleIconComponent,
     TruckIconComponent,
-    CarIconComponent],
+    CarIconComponent,
+    FuelIconComponent,
+    PaintIconComponent],
   exports: [
     GarageIconComponent,
     KeyIconComponent,
     MotorcycleIconComponent,
     TruckIconComponent,
-    CarIconComponent
+    CarIconComponent,
+    FuelIconComponent,
+    PaintIconComponent
   ],
   imports: [
     CommonModule

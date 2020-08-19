@@ -1,0 +1,34 @@
+@import "src/assets/styles/variables.scss";
+
+.gas-color {
+  fill: $primary;
+
+  &.gas- {
+    &diesel {
+      fill: $gray;
+    }
+    &gasoline {
+      fill: $blue;
+    }
+  }
+}
+
+.eco {
+  fill: $primary;
+
+  &.electric {
+    fill: $green;
+  }
+
+  &.hybrid {
+    fill: $orange;
+  }
+}
+
+.inside {
+  fill: $pale-gray;
+}
+
+.outline {
+  fill: $black;
+}

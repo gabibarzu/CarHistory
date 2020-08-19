@@ -153,8 +153,8 @@ button:focus {
 }
 
 // Input section
-input.form-control,
-input.form-control:focus {
+.form-control,
+.form-control:focus {
   background-color: $pale-gray;
   color: $black;
   border: 1px solid $pale-gray;
@@ -162,7 +162,7 @@ input.form-control:focus {
   @include transition;
 }
 
-input.form-control:focus {
+.form-control:focus {
   box-shadow: none;
   background-color: $white;
 }

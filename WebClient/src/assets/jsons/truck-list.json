@@ -1,75 +1,48 @@
 [
   {
-    "brand": "Freightliner"
-  },
-  {
-    "brand": "Peterbilt"
-  },
-  {
-    "brand": "Kenworth"
-  },
-  {
-    "brand": "International"
-  },
-  {
-    "brand": "International"
-  },
-  {
-    "brand": "Western Star"
-  },
-  {
-    "brand": "Mercedes-Benz"
-  },
-  {
-    "brand": "MAN"
-  },
-  {
-    "brand": "Volvo"
-  },
-  {
-    "brand": "Scania"
-  },
-  {
-    "brand": "Hino"
-  },
-  {
-    "brand": "UD"
-  },
-  {
-    "brand": "Isuzu"
-  },
-  {
-    "brand": "Dongfeng"
-  },
-  {
-    "brand": "Foton"
-  },
-  {
-    "brand": "Tata"
-  },
-  {
     "brand": "BharatBenz"
-  },
-  {
-    "brand": "Iveco"
-  },
-  {
-    "brand": "DAF"
-  },
-  {
-    "brand": "MAZ"
-  },
-  {
-    "brand": "Ford"
-  },
-  {
-    "brand": "Ram Trucks"
   },
   {
     "brand": "Chevrolet"
   },
   {
+    "brand": "DAF"
+  },
+  {
+    "brand": "Dongfeng"
+  },
+  {
+    "brand": "Ford"
+  },
+  {
+    "brand": "Foton"
+  },
+  {
+    "brand": "Freightliner"
+  },
+  {
     "brand": "GMC"
+  },
+  {
+    "brand": "Great Wall"
+  },
+  {
+    "brand": "Hino"
+  },
+  {
+    "brand": "Honda"
+  },
+  {
+    "brand": "International"
+  },
+  {
+    "brand": "International"
+  },
+  {
+    "brand": "Isuzu"
+  },
+  {
+    "brand": "Iveco"
   },
   {
     "brand": "Jeep"
@@ -78,15 +51,42 @@
     "brand": "Jiangling"
   },
   {
+    "brand": "Jiangling"
+  },
+  {
+    "brand": "Kenworth"
+  },
+  {
+    "brand": "MAN"
+  },
+  {
+    "brand": "MAZ"
+  },
+  {
+    "brand": "Mercedes-Benz"
+  },
+  {
     "brand": "Nissan"
   },
   {
-    "brand": "Honda"
+    "brand": "Peterbilt"
   },
   {
-    "brand": "Great Wall"
+    "brand": "Ram Trucks"
   },
   {
-    "brand": "Jiangling"
+    "brand": "Scania"
+  },
+  {
+    "brand": "Tata"
+  },
+  {
+    "brand": "UD"
+  },
+  {
+    "brand": "Volvo"
+  },
+  {
+    "brand": "Western Star"
   }
 ]

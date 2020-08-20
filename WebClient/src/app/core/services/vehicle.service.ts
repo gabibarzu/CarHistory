@@ -7,6 +7,14 @@ import { VehicleType } from '../models';
 })
 export class VehicleService {
 
+  private fuelList = [
+    { id: 1, value: "Gasoline" },
+    { id: 2, value: "Diesel" },
+    { id: 3, value: "Hybrid" },
+    { id: 4, value: "Electric" }
+  ];
+  private paintList = ["pink", "purple", "blue", "green", "orange", "yellow", "red", "brown", "gray", "black", "white", "other"];
+
   constructor(private httpClient: HttpClient) { }
 
   read(vehicleType: number) {
@@ -21,6 +29,13 @@ export class VehicleService {
         return this.httpClient.get("assets/jsons/truck-list.json");
       }
     }
+  }
 
+  getFuelType() {
+    return this.fuelList;
+  }
+
+  getPaint() {
+    return this.paintList;
   }
 }

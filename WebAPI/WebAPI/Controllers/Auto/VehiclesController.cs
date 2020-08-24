@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebAPI.Core.Models.Authentication;
 using WebAPI.Core.Models.Auto;
 using WebAPI.Core.Models.Auto.ToWeb;
 using WebAPI.Infrastructure.DataAccess;
@@ -15,26 +17,30 @@ namespace WebAPI.Web.Controllers.Auto
     public class VehiclesController : ControllerBase
     {
         private readonly DatabaseContext _context;
+        private readonly UserManager<User> _userManager;
 
-        public VehiclesController(DatabaseContext context)
+        public VehiclesController(DatabaseContext context, UserManager<User> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: api/Vehicles
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
         {
-            return await _context.Vehicles.ToListAsync();
+            var user = await this.GetLoggedInUserAsync();
+            return await _context.Vehicles.Where(vehicle => vehicle.User == user).ToListAsync();
         }
 
         // GET: api/Vehicles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Vehicle>> GetVehicle(Guid id)
         {
+            var user = await this.GetLoggedInUserAsync();
             var vehicle = await _context.Vehicles.FindAsync(id);
 
-            if (vehicle == null)
+            if (vehicle == null || vehicle.User != user)
             {
                 return NotFound();
             }
@@ -43,12 +49,13 @@ namespace WebAPI.Web.Controllers.Auto
         }
 
         // PUT: api/Vehicles/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // To protect from over posting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVehicle(int id, Vehicle vehicle)
         {
-            if (id != vehicle.Id)
+            var user = await this.GetLoggedInUserAsync();
+            if (id != vehicle.Id || vehicle.User != user)
             {
                 return BadRequest();
             }
@@ -75,12 +82,15 @@ namespace WebAPI.Web.Controllers.Auto
         }
 
         // POST: api/Vehicles
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // To protect from over posting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Vehicle>> PostVehicle(Vehicle vehicle)
+        public async Task<ActionResult<Vehicle>> PostVehicle([FromBody] Vehicle vehicle)
         {
-            _context.Vehicles.Add(vehicle);
+            vehicle.User = await this.GetLoggedInUserAsync();
+            vehicle.Added = DateTime.Now;
+
+            await _context.Vehicles.AddAsync(vehicle);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetVehicle", new { id = vehicle.Id }, vehicle);
@@ -90,8 +100,10 @@ namespace WebAPI.Web.Controllers.Auto
         [HttpDelete("{id}")]
         public async Task<ActionResult<Vehicle>> DeleteVehicle(Guid id)
         {
+            var user = await this.GetLoggedInUserAsync();
             var vehicle = await _context.Vehicles.FindAsync(id);
-            if (vehicle == null)
+
+            if (vehicle == null || vehicle.User != user)
             {
                 return NotFound();
             }
@@ -107,8 +119,9 @@ namespace WebAPI.Web.Controllers.Auto
         [Route("GetPreviewVehicles")]
         public async Task<ActionResult<PreviewVehicle>> GetPreviewVehicles()
         {
+            var user = await this.GetLoggedInUserAsync();
             var result = new PreviewVehicle();
-            var vehiclesDb = await _context.Vehicles.ToListAsync();
+            var vehiclesDb = await _context.Vehicles.Where(vehicle => vehicle.User == user).ToListAsync();
             var vehicles = vehiclesDb.OrderByDescending(vehicle => vehicle.IsFavorite)
                 .ThenByDescending(vehicle => vehicle.Added).ToList();
             if (vehicles.Count > 2)
@@ -128,6 +141,12 @@ namespace WebAPI.Web.Controllers.Auto
         private bool VehicleExists(int id)
         {
             return _context.Vehicles.Any(e => e.Id == id);
+        }
+
+        private async Task<User> GetLoggedInUserAsync()
+        {
+            var userId = User.Claims.First(c => c.Type == "UserID").Value;
+            return await _userManager.FindByIdAsync(userId);
         }
     }
 }

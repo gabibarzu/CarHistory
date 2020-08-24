@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PreviewVehiclesService } from './preview-vehicles.service';
 import { PreviewClassesStyle } from 'src/app/core/models';
+import { VehicleService } from 'src/app/core/services/vehicle.service';
 
 @Component({
   selector: 'app-preview-vehicles',
@@ -11,7 +11,7 @@ export class PreviewVehiclesComponent implements OnInit {
   preview: any;
   previewClasses: PreviewClassesStyle = new PreviewClassesStyle();
 
-  constructor(private service: PreviewVehiclesService) { }
+  constructor(private service: VehicleService) { }
 
   ngOnInit() {
     this.service.getPreviewVehicles().subscribe(

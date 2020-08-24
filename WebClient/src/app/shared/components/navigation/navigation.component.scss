@@ -4,6 +4,15 @@
   background-color: $black !important;
 }
 
+.navbar-brand {
+  color: $pale-gray !important;
+  @include transition;
+
+  &:hover {
+    color: $white !important;
+  }
+}
+
 .navbar-dark .navbar-nav {
   .nav-item {
     .nav-link {

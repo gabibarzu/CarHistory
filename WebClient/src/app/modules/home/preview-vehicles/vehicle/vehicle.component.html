@@ -6,14 +6,25 @@
     *ngIf="vehicle.isFavorite"
   ></app-icon>
   <div class="vehicle-image">
-    <app-car-icon [color]="vehicle.color"></app-car-icon>
+    <ng-container [ngSwitch]="vehicle.type">
+      <app-motorcycle-icon
+        *ngSwitchCase="1"
+        [color]="vehicle.color"
+      ></app-motorcycle-icon>
+      <app-car-icon *ngSwitchCase="2" [color]="vehicle.color"></app-car-icon>
+      <app-truck-icon
+        *ngSwitchCase="3"
+        [color]="vehicle.color"
+      ></app-truck-icon>
+    </ng-container>
   </div>
   <div class="pb-3 pt-3">
     <h3 class="vehicle-name text-bold">
       {{ vehicle.brand }}
     </h3>
     <h4 class="vehicle-name text-bold">
-      {{ vehicle.model }}
+      <span *ngIf="vehicle.model; else empty">{{ vehicle.model }}</span>
+      <ng-template #empty>&nbsp;</ng-template>
     </h4>
     <h5 class="vehicle-number">{{ vehicle.registrationNumber }}</h5>
   </div>

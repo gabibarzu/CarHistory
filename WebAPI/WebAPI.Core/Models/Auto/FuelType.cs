@@ -2,9 +2,9 @@
 {
     public enum FuelType
     {
-        Gasoline,
-        Diesel,
-        Hybrid,
-        Electric
+        Gasoline = 1,
+        Diesel = 2,
+        Hybrid = 3,
+        Electric = 4
     }
 }

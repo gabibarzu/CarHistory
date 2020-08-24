@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { VehicleService } from 'src/app/core/services/vehicle.service';
 import { InputVehicleModel, VehicleType, Vehicle } from 'src/app/core/models';
 import { FormBuilder } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-new-vehicle',
@@ -28,10 +30,10 @@ export class AddNewVehicleComponent implements OnInit {
   colorList: any;
   selectedVehicleType: number;
 
-  constructor(private vehicleService: VehicleService, public fb: FormBuilder) { }
+  constructor(private service: VehicleService, public fb: FormBuilder, private toastr: ToastrService, private router: Router) { }
 
   ngOnInit(): void {
-    this.vehicleService.read(1).subscribe(
+    this.service.getVehiclesList(1).subscribe(
       (res: any) => {
         this.motorcyclesList = res;
       },
@@ -39,7 +41,7 @@ export class AddNewVehicleComponent implements OnInit {
         console.log(err);
       });
 
-    this.vehicleService.read(2).subscribe(
+    this.service.getVehiclesList(2).subscribe(
       (res: any) => {
         this.carsList = res;
       },
@@ -47,7 +49,7 @@ export class AddNewVehicleComponent implements OnInit {
         console.log(err);
       });
 
-    this.vehicleService.read(3).subscribe(
+    this.service.getVehiclesList(3).subscribe(
       (res: any) => {
         this.trucksList = res;
       },
@@ -55,8 +57,8 @@ export class AddNewVehicleComponent implements OnInit {
         console.log(err);
       });
 
-    this.fuelList = this.vehicleService.getFuelType();
-    this.colorList = this.vehicleService.getColor();
+    this.fuelList = this.service.getFuelTypesList();
+    this.colorList = this.service.getColorsList();
   }
 
   selectVehicleType(type: number) {
@@ -131,6 +133,13 @@ export class AddNewVehicleComponent implements OnInit {
       this.color.value,
       this.registrantionNumber.value,
       this.vin.value);
-    alert(vehicle)
+    this.service.saveVehicle(vehicle).subscribe(
+      (res: any) => {
+        this.toastr.success('New vehicle was added!', 'Success');
+        this.router.navigate(['/home'])
+      },
+      (err: any) => {
+        console.log(err);
+      });
   }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+using WebAPI.Core.Models.Authentication;
 
 namespace WebAPI.Core.Models.Auto
 {
@@ -16,5 +18,7 @@ namespace WebAPI.Core.Models.Auto
         public string Color { get; set; }
         public bool IsFavorite { get; set; }
         public DateTime Added { get; set; }
+        [JsonIgnore]
+        public User User { get; set; }
     }
 }

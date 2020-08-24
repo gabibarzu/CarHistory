@@ -1,1 +1,14 @@
-<p>garage works!</p>
+<div class="container section">
+  <div class="row">
+    <h2 class="col-12 text-center">My garage</h2>
+  </div>
+  <hr />
+  <div class="row" *ngIf="vehicles && vehicles.length > 0">
+    <div
+      *ngFor="let vehicle of vehicles"
+      class="col-12 col-sm-6 col-lg-3 mt-3 mb-3 tile"
+    >
+      <app-vehicle [vehicle]="vehicle"></app-vehicle>
+    </div>
+  </div>
+</div>

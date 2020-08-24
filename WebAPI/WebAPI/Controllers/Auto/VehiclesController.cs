@@ -30,7 +30,8 @@ namespace WebAPI.Web.Controllers.Auto
         public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
         {
             var user = await this.GetLoggedInUserAsync();
-            return await _context.Vehicles.Where(vehicle => vehicle.User == user).ToListAsync();
+            return await _context.Vehicles.Where(vehicle => vehicle.User == user).OrderByDescending(vehicle => vehicle.IsFavorite)
+                .ThenByDescending(vehicle => vehicle.Added).ToListAsync();
         }
 
         // GET: api/Vehicles/5

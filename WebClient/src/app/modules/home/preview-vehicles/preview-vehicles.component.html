@@ -10,7 +10,9 @@
     [ngClass]="previewClasses.garageStyle"
     routerLink="/garage"
   >
-    <app-garage [vehiclesInGarage]="preview.vehiclesInGarage"></app-garage>
+    <app-tile-garage
+      [vehiclesInGarage]="preview.vehiclesInGarage"
+    ></app-tile-garage>
   </div>
   <div
     class="mt-3 mb-3 tile"

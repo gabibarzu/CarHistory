@@ -11,34 +11,38 @@ import { ToastrModule } from 'ngx-toastr';
 import { CustomIconsModule } from './shared/components/custom-icons/custom-icons.module';
 import { NavigationModule } from './shared/components/navigation/navigation.module';
 import { IconModule } from './shared/components/icon/icon.module';
-
-import { AuthenticationService } from './modules/authentication/authentication.service';
+import { VehicleModule } from './shared/components/vehicle/vehicle.module';
 
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
+import { AuthenticationService } from './modules/authentication/authentication.service';
+import { VehicleService } from './core/services/vehicle.service';
+
 import { HomeComponent } from './modules/home/home.component';
+import { PreviewVehiclesComponent } from './modules/home/preview-vehicles/preview-vehicles.component';
+import { AddVehicleComponent } from './modules/home/preview-vehicles/add-vehicle/add-vehicle.component';
+import { GarageTileComponent } from './modules/home/preview-vehicles/garage/garage.component';
+
 import { AuthenticationComponent } from './modules/authentication/authentication.component';
 import { LoginComponent } from './modules/authentication/login/login.component';
 import { RegistrationComponent } from './modules/authentication/registration/registration.component';
-import { PreviewVehiclesComponent } from './modules/home/preview-vehicles/preview-vehicles.component';
-import { VehicleComponent } from './modules/home/preview-vehicles/vehicle/vehicle.component';
-import { AddVehicleComponent } from './modules/home/preview-vehicles/add-vehicle/add-vehicle.component';
-import { GarageComponent } from './modules/home/preview-vehicles/garage/garage.component';
+
 import { AddNewVehicleComponent } from './modules/add-new-vehicle/add-new-vehicle.component';
-import { VehicleService } from './core/services/vehicle.service';
+
+import { GarageComponent } from './modules/garage/garage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    PreviewVehiclesComponent,
+    AddVehicleComponent,
+    GarageTileComponent,
     AuthenticationComponent,
     LoginComponent,
     RegistrationComponent,
-    PreviewVehiclesComponent,
-    VehicleComponent,
-    AddVehicleComponent,
-    GarageComponent,
     AddNewVehicleComponent,
+    GarageComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,8 @@ import { VehicleService } from './core/services/vehicle.service';
     FormsModule,
     CustomIconsModule,
     NavigationModule,
-    IconModule
+    IconModule,
+    VehicleModule
   ],
   providers: [
     AuthenticationService, {

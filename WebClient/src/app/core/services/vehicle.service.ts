@@ -48,4 +48,8 @@ export class VehicleService {
   saveVehicle(vehicle: Vehicle) {
     return this.http.post<Vehicle>(this.BaseURI, vehicle);
   }
+
+  getVehicles() {
+    return this.http.get<Vehicle[]>(this.BaseURI);
+  }
 }

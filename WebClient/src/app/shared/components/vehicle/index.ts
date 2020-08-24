@@ -1,0 +1,1 @@
+export { VehicleComponent } from './vehicle.component';

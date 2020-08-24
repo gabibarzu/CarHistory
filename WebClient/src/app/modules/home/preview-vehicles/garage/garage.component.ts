@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-garage',
+  selector: 'app-tile-garage',
   templateUrl: './garage.component.html',
   styleUrls: ['./garage.component.scss']
 })
-export class GarageComponent implements OnInit {
+export class GarageTileComponent implements OnInit {
   @Input() vehiclesInGarage: number;
   constructor() { }
 

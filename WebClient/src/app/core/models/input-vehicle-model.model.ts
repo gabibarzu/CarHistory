@@ -1,4 +1,4 @@
-export class VehicleModel {
+export class InputVehicleModel {
     brand: string;
     models: string[];
 }

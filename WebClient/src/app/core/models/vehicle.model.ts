@@ -11,4 +11,13 @@ export class Vehicle {
     color: string;
     isFavorite: boolean;
     added: Date;
+
+    constructor(type: FuelType, brand: string, model: string, fuel: FuelType, color: string, registrationNumber: string, vin: string) {
+        this.brand = brand;
+        this.model = model;
+        this.fuel = fuel;
+        this.color = color;
+        this.registrationNumber = registrationNumber;
+        this.vin = vin;
+    }
 }

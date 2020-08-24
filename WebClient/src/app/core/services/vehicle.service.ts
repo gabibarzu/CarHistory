@@ -13,7 +13,7 @@ export class VehicleService {
     { id: 3, value: "Hybrid" },
     { id: 4, value: "Electric" }
   ];
-  private paintList = ["pink", "purple", "blue", "green", "orange", "yellow", "red", "brown", "gray", "black", "white", "other"];
+  private colorList = ["pink", "purple", "blue", "green", "orange", "yellow", "red", "brown", "gray", "black", "white", "other"];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -35,7 +35,7 @@ export class VehicleService {
     return this.fuelList;
   }
 
-  getPaint() {
-    return this.paintList;
+  getColor() {
+    return this.colorList;
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VehicleService } from 'src/app/core/services/vehicle.service';
-import { VehicleModel, VehicleType, Vehicle } from 'src/app/core/models';
+import { InputVehicleModel, VehicleType, Vehicle } from 'src/app/core/models';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -13,19 +13,19 @@ export class AddNewVehicleComponent implements OnInit {
     brand: [''],
     model: [''],
     fuel: [''],
-    paint: [''],
+    color: [''],
     registrantionNumber: [''],
     vin: ['']
   })
 
-  motorcyclesList: VehicleModel[];
-  carsList: VehicleModel[];
-  trucksList: VehicleModel[];
+  motorcyclesList: InputVehicleModel[];
+  carsList: InputVehicleModel[];
+  trucksList: InputVehicleModel[];
 
-  vehiclesList: VehicleModel[];
+  vehiclesList: InputVehicleModel[];
   modelsList: any;
   fuelList: any;
-  paintList: any;
+  colorList: any;
   selectedVehicleType: number;
 
   constructor(private vehicleService: VehicleService, public fb: FormBuilder) { }
@@ -56,7 +56,7 @@ export class AddNewVehicleComponent implements OnInit {
       });
 
     this.fuelList = this.vehicleService.getFuelType();
-    this.paintList = this.vehicleService.getPaint();
+    this.colorList = this.vehicleService.getColor();
   }
 
   selectVehicleType(type: number) {
@@ -98,8 +98,16 @@ export class AddNewVehicleComponent implements OnInit {
     return this.addNewVehicleForm.get('fuel');
   }
 
-  get paint() {
-    return this.addNewVehicleForm.get('paint');
+  get color() {
+    return this.addNewVehicleForm.get('color');
+  }
+
+  get registrantionNumber() {
+    return this.addNewVehicleForm.get('registrantionNumber');
+  }
+
+  get vin() {
+    return this.addNewVehicleForm.get('vin');
   }
 
   changeBrand() {
@@ -110,7 +118,19 @@ export class AddNewVehicleComponent implements OnInit {
     };
   }
 
+  canSubmit() {
+    return this.selectedVehicleType && this.brand.value && this.fuel.value && this.color.value && this.registrantionNumber.value && this.vin.value;
+  }
+
   onSubmit() {
-    alert(JSON.stringify(this.addNewVehicleForm.value))
+    const vehicle = new Vehicle(
+      this.selectedVehicleType,
+      this.brand.value,
+      this.model.value,
+      this.fuel.value,
+      this.color.value,
+      this.registrantionNumber.value,
+      this.vin.value);
+    alert(vehicle)
   }
 }

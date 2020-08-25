@@ -4,11 +4,12 @@
   </div>
   <hr />
   <div class="row" *ngIf="vehicles && vehicles.length > 0">
-    <div
+    <a
       *ngFor="let vehicle of vehicles"
       class="col-12 col-sm-6 col-lg-3 mt-3 mb-3 tile"
+      [routerLink]="['/vehicle', vehicle.id]"
     >
       <app-vehicle-tile [vehicle]="vehicle"></app-vehicle-tile>
-    </div>
+    </a>
   </div>
 </div>

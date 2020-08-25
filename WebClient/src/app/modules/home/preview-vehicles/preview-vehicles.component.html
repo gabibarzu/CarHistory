@@ -1,10 +1,18 @@
 <div class="row" *ngIf="preview && previewClasses">
-  <div class="mt-3 mb-3 tile" [ngClass]="previewClasses.firstVehicleStyle">
+  <a
+    class="mt-3 mb-3 tile"
+    [ngClass]="previewClasses.firstVehicleStyle"
+    [routerLink]="['/vehicle', preview.vehicles[0].id]"
+  >
     <app-vehicle-tile [vehicle]="preview.vehicles[0]"></app-vehicle-tile>
-  </div>
-  <div class="mt-3 mb-3 tile" [ngClass]="previewClasses.secondVehicleStyle">
+  </a>
+  <a
+    class="mt-3 mb-3 tile"
+    [ngClass]="previewClasses.secondVehicleStyle"
+    [routerLink]="['/vehicle', preview.vehicles[1].id]"
+  >
     <app-vehicle-tile [vehicle]="preview.vehicles[1]"></app-vehicle-tile>
-  </div>
+  </a>
   <div
     class="mt-3 mb-3 tile"
     [ngClass]="previewClasses.garageStyle"

@@ -8,6 +8,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { AddNewVehicleComponent } from './modules/add-new-vehicle/add-new-vehicle.component';
 import { GarageComponent } from './modules/garage/garage.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found';
+import { VehicleComponent } from './modules/vehicle/vehicle.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/authentication/login', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'add-new-vehicle', component: AddNewVehicleComponent, canActivate: [AuthGuard] },
   { path: 'garage', component: GarageComponent, canActivate: [AuthGuard] },
+  { path: 'vehicle/:id', component: VehicleComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

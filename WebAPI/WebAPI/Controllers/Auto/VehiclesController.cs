@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,7 @@ namespace WebAPI.Web.Controllers.Auto
 
         // GET: api/Vehicles
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
         {
             var user = await this.GetLoggedInUserAsync();
@@ -36,7 +38,8 @@ namespace WebAPI.Web.Controllers.Auto
 
         // GET: api/Vehicles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Vehicle>> GetVehicle(Guid id)
+        [Authorize]
+        public async Task<ActionResult<Vehicle>> GetVehicle(int id)
         {
             var user = await this.GetLoggedInUserAsync();
             var vehicle = await _context.Vehicles.FindAsync(id);
@@ -53,6 +56,7 @@ namespace WebAPI.Web.Controllers.Auto
         // To protect from over posting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutVehicle(int id, Vehicle vehicle)
         {
             var user = await this.GetLoggedInUserAsync();
@@ -86,6 +90,7 @@ namespace WebAPI.Web.Controllers.Auto
         // To protect from over posting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Vehicle>> PostVehicle([FromBody] Vehicle vehicle)
         {
             vehicle.User = await this.GetLoggedInUserAsync();
@@ -99,7 +104,8 @@ namespace WebAPI.Web.Controllers.Auto
 
         // DELETE: api/Vehicles/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Vehicle>> DeleteVehicle(Guid id)
+        [Authorize]
+        public async Task<ActionResult<Vehicle>> DeleteVehicle(int id)
         {
             var user = await this.GetLoggedInUserAsync();
             var vehicle = await _context.Vehicles.FindAsync(id);
@@ -117,6 +123,7 @@ namespace WebAPI.Web.Controllers.Auto
 
         // GET: api/Vehicles/GetPreviewVehicles
         [HttpGet]
+        [Authorize]
         [Route("GetPreviewVehicles")]
         public async Task<ActionResult<PreviewVehicle>> GetPreviewVehicles()
         {

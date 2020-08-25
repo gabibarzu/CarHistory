@@ -13,41 +13,27 @@ import { NavigationModule } from './shared/components/navigation/navigation.modu
 import { IconModule } from './shared/components/icon/icon.module';
 import { VehicleTileModule } from './shared/components/vehicle-tile/vehicle-tile.module';
 import { PageNotFoundModule } from './shared/components/page-not-found/page-not-found.module';
+import { HomeModule } from './modules/home/home.module';
 
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 import { AuthenticationService } from './modules/authentication/authentication.service';
 import { VehicleService } from './core/services/vehicle.service';
 
-import { HomeComponent } from './modules/home/home.component';
-import { PreviewVehiclesComponent } from './modules/home/preview-vehicles/preview-vehicles.component';
-import { AddVehicleTileComponent } from './modules/home/preview-vehicles/add-vehicle-tile/add-vehicle-tile.component';
-import { GarageTileComponent } from './modules/home/preview-vehicles/garage-tile/garage-tile.component';
-
-import { AuthenticationComponent } from './modules/authentication/authentication.component';
-import { LoginComponent } from './modules/authentication/login/login.component';
-import { RegistrationComponent } from './modules/authentication/registration/registration.component';
-
 import { AddNewVehicleComponent } from './modules/add-new-vehicle/add-new-vehicle.component';
 
 import { GarageComponent } from './modules/garage/garage.component';
-import { VehicleTileComponent } from './shared/components/vehicle-tile';
+
 import { VehicleComponent } from './modules/vehicle/vehicle.component';
+import { VehicleNotFoundComponent } from './modules/vehicle/vehicle-not-found/vehicle-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    PreviewVehiclesComponent,
-    AddVehicleTileComponent,
-    GarageTileComponent,
-    AuthenticationComponent,
-    LoginComponent,
-    RegistrationComponent,
     AddNewVehicleComponent,
     GarageComponent,
-    VehicleTileComponent,
-    VehicleComponent
+    VehicleComponent,
+    VehicleNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +48,8 @@ import { VehicleComponent } from './modules/vehicle/vehicle.component';
     CustomIconsModule,
     NavigationModule,
     IconModule,
-    PageNotFoundModule
+    PageNotFoundModule,
+    VehicleTileModule, HomeModule
   ],
   providers: [
     AuthenticationService, {

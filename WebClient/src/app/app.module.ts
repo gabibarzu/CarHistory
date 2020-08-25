@@ -12,6 +12,7 @@ import { CustomIconsModule } from './shared/components/custom-icons/custom-icons
 import { NavigationModule } from './shared/components/navigation/navigation.module';
 import { IconModule } from './shared/components/icon/icon.module';
 import { VehicleModule } from './shared/components/vehicle/vehicle.module';
+import { PageNotFoundModule } from './shared/components/page-not-found/page-not-found.module';
 
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
@@ -42,7 +43,7 @@ import { GarageComponent } from './modules/garage/garage.component';
     LoginComponent,
     RegistrationComponent,
     AddNewVehicleComponent,
-    GarageComponent
+    GarageComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +58,8 @@ import { GarageComponent } from './modules/garage/garage.component';
     CustomIconsModule,
     NavigationModule,
     IconModule,
-    VehicleModule
+    VehicleModule,
+    PageNotFoundModule
   ],
   providers: [
     AuthenticationService, {

@@ -1,0 +1,1 @@
+export { VehicleTileComponent } from './vehicle-tile.component';

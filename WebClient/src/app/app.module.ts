@@ -11,7 +11,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { CustomIconsModule } from './shared/components/custom-icons/custom-icons.module';
 import { NavigationModule } from './shared/components/navigation/navigation.module';
 import { IconModule } from './shared/components/icon/icon.module';
-import { VehicleModule } from './shared/components/vehicle/vehicle.module';
+import { VehicleTileModule } from './shared/components/vehicle-tile/vehicle-tile.module';
 import { PageNotFoundModule } from './shared/components/page-not-found/page-not-found.module';
 
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
@@ -21,8 +21,8 @@ import { VehicleService } from './core/services/vehicle.service';
 
 import { HomeComponent } from './modules/home/home.component';
 import { PreviewVehiclesComponent } from './modules/home/preview-vehicles/preview-vehicles.component';
-import { AddVehicleComponent } from './modules/home/preview-vehicles/add-vehicle/add-vehicle.component';
-import { GarageTileComponent } from './modules/home/preview-vehicles/garage/garage.component';
+import { AddVehicleTileComponent } from './modules/home/preview-vehicles/add-vehicle-tile/add-vehicle-tile.component';
+import { GarageTileComponent } from './modules/home/preview-vehicles/garage-tile/garage-tile.component';
 
 import { AuthenticationComponent } from './modules/authentication/authentication.component';
 import { LoginComponent } from './modules/authentication/login/login.component';
@@ -31,19 +31,23 @@ import { RegistrationComponent } from './modules/authentication/registration/reg
 import { AddNewVehicleComponent } from './modules/add-new-vehicle/add-new-vehicle.component';
 
 import { GarageComponent } from './modules/garage/garage.component';
+import { VehicleTileComponent } from './shared/components/vehicle-tile';
+import { VehicleComponent } from './modules/vehicle/vehicle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PreviewVehiclesComponent,
-    AddVehicleComponent,
+    AddVehicleTileComponent,
     GarageTileComponent,
     AuthenticationComponent,
     LoginComponent,
     RegistrationComponent,
     AddNewVehicleComponent,
     GarageComponent,
+    VehicleTileComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,6 @@ import { GarageComponent } from './modules/garage/garage.component';
     CustomIconsModule,
     NavigationModule,
     IconModule,
-    VehicleModule,
     PageNotFoundModule
   ],
   providers: [

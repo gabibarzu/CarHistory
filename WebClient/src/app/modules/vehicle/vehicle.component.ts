@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Vehicle } from 'src/app/core/models';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-vehicle',
@@ -7,7 +6,6 @@ import { Vehicle } from 'src/app/core/models';
   styleUrls: ['./vehicle.component.scss']
 })
 export class VehicleComponent implements OnInit {
-  @Input() vehicle: Vehicle;
 
   constructor() { }
 

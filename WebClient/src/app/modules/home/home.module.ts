@@ -11,8 +11,8 @@ import { AuthenticationComponent } from '../authentication/authentication.compon
 import { LoginComponent } from '../authentication/login/login.component';
 import { RegistrationComponent } from '../authentication/registration/registration.component';
 import { PreviewVehiclesComponent } from './preview-vehicles/preview-vehicles.component';
-import { AddVehicleComponent } from './preview-vehicles/add-vehicle/add-vehicle.component';
-import { GarageTileComponent } from './preview-vehicles/garage/garage.component';
+import { AddVehicleTileComponent } from './preview-vehicles/add-vehicle-tile/add-vehicle-tile.component';
+import { GarageTileComponent } from './preview-vehicles/garage-tile/garage-tile.component';
 
 @NgModule({
   declarations: [],
@@ -28,7 +28,7 @@ import { GarageTileComponent } from './preview-vehicles/garage/garage.component'
     LoginComponent,
     RegistrationComponent,
     PreviewVehiclesComponent,
-    AddVehicleComponent,
+    AddVehicleTileComponent,
     GarageTileComponent
   ],
   exports: [
@@ -37,7 +37,7 @@ import { GarageTileComponent } from './preview-vehicles/garage/garage.component'
     LoginComponent,
     RegistrationComponent,
     PreviewVehiclesComponent,
-    AddVehicleComponent,
+    AddVehicleTileComponent,
     GarageTileComponent
   ]
 })

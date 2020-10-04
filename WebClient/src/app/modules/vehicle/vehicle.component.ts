@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Vehicle } from 'src/app/core/models';
+import { Vehicle, FuelType } from 'src/app/core/models';
 import { VehicleService } from 'src/app/core/services/vehicle.service';
 
 @Component({
@@ -13,6 +13,7 @@ export class VehicleComponent implements OnInit, OnDestroy {
   private sub: any;
 
   vehicle: Vehicle;
+  isLoaded: boolean = false;
 
   constructor(private route: ActivatedRoute, private service: VehicleService) { }
 
@@ -25,8 +26,10 @@ export class VehicleComponent implements OnInit, OnDestroy {
       this.service.getVehicle(this.id).subscribe(
         (res: any) => {
           this.vehicle = res;
+          this.isLoaded = true;
         },
         (err: any) => {
+          this.isLoaded = true;
           console.log(err);
         });
     }
@@ -34,5 +37,9 @@ export class VehicleComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+
+  get vehicleFuelType() {
+    return FuelType[this.vehicle.fuel];
   }
 }

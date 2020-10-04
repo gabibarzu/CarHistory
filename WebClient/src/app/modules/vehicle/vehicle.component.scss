@@ -1,0 +1,58 @@
+@import "src/assets/styles/variables.scss";
+
+::ng-deep {
+  .vehicle {
+    svg {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .favorite {
+    position: absolute;
+    color: $orange;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.info-details {
+  div {
+    display: flex;
+
+    &:nth-child(odd) {
+      span {
+        background-color: $white;
+      }
+    }
+
+    &:first-child {
+      strong {
+        border-top-left-radius: 5px;
+      }
+      span {
+        border-top-right-radius: 5px;
+      }
+    }
+
+    &:last-child {
+      strong {
+        border-bottom-left-radius: 5px;
+      }
+      span {
+        border-bottom-right-radius: 5px;
+      }
+    }
+
+    strong {
+      width: 33.333333%;
+      padding: 10px;
+      background-color: $pale-gray;
+    }
+
+    span {
+      width: 66.666666%;
+      padding: 10px;
+    }
+  }
+}

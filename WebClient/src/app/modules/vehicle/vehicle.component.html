@@ -1,3 +1,61 @@
-<ng-container *ngIf="!vehicle">
-  <app-vehicle-not-found></app-vehicle-not-found>
+<ng-container *ngIf="isLoaded">
+  <ng-container *ngIf="!vehicle; else page">
+    <app-vehicle-not-found></app-vehicle-not-found>
+  </ng-container>
+  <ng-template #page>
+    <div class="container section">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-12 text-center vehicle">
+          <ng-container [ngSwitch]="vehicle.type">
+            <app-motorcycle-icon *ngSwitchCase="1" [color]="vehicle.color">
+            </app-motorcycle-icon>
+            <app-car-icon
+              *ngSwitchCase="2"
+              [color]="vehicle.color"
+            ></app-car-icon>
+            <app-truck-icon *ngSwitchCase="3" [color]="vehicle.color">
+            </app-truck-icon>
+          </ng-container>
+          <app-icon
+            item="grade"
+            size="extra-large"
+            class="favorite"
+            *ngIf="vehicle.isFavorite"
+          ></app-icon>
+        </div>
+        <div class="col-md-6 offset-md-3 col-12">
+          <div class="info-details">
+            <div>
+              <strong>Brand: </strong>
+              <span>{{ vehicle.brand }}</span>
+            </div>
+            <div *ngIf="vehicle.model">
+              <strong>Model: </strong>
+              <span>{{ vehicle.model }}</span>
+            </div>
+            <div>
+              <strong>Fuel: </strong>
+              <span>{{ vehicleFuelType }}</span>
+            </div>
+            <div>
+              <strong>Color: </strong>
+              <span>{{ vehicle.color | titlecase }}</span>
+            </div>
+            <div>
+              <strong>Number: </strong>
+              <span>{{ vehicle.registrationNumber }}</span>
+            </div>
+            <div>
+              <strong>VIN: </strong>
+              <span>{{ vehicle.vin }}</span>
+            </div>
+            <div>
+              <strong>Added: </strong>
+              <span>{{ vehicle.added | date }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
 </ng-container>
